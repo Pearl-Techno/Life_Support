@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Life Support</string>
+    <string name="menu_home" />
+    <string name="Treatment_Information" />
+    <string name="Notifications" />
+    <string name="Educational_Content" />
+    <string name="Settings" />
+</resources>

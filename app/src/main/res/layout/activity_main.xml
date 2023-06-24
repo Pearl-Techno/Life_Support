@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#48C9B0"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Life Support"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <!-- First CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_symptoms_tracking"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="50dp"
+        android:layout_below="@id/header"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:layout_width="600dp"
+            android:layout_height="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/disease" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Symptom Tracking"
+            android:textColor="#48C9B0"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Second CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_meds_reminder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="50dp"
+        android:layout_below="@id/card_symptoms_tracking"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:layout_width="600dp"
+            android:layout_height="50dp"
+            android:src="@drawable/medicine"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Medication Reminders"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#48C9B0"
+            android:padding="8dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Third CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_support_communites"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="50dp"
+        android:layout_below="@id/card_meds_reminder"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/group"
+            android:scaleType="center" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Support Communities"
+            android:textColor="#48C9B0"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="8dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Fourth CardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_appointments"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="50dp"
+        android:layout_toEndOf="@id/card_support_communites"
+        android:layout_alignTop="@id/card_support_communites"
+        android:layout_alignBottom="@id/card_support_communites"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/bookmark"
+            android:scaleType="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Appointment Management"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#48C9B0"
+            android:padding="8dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Main Content Area -->
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:menu="@menu/bottom_navigation_menu" />
+
+
+</RelativeLayout>
